@@ -4,7 +4,7 @@ import json
 def cargar_json(path:str)->list:
     '''
     carga un archivo de tipo json para utilizarlo
-    recive la ruta donde se encuentra el archivo
+    recibe la ruta donde se encuentra el archivo
     retorna una lista con los valores del archivo json
     '''
     with open(path, "r") as file:
@@ -14,7 +14,7 @@ def cargar_json(path:str)->list:
 def mostrar (lista:list):
     '''
     Imprime por consola cada indice una lista de forma en que se vea prolija
-    recive una lista
+    recibe una lista
     no retorna
     '''
     if len(lista)>0:
@@ -26,7 +26,7 @@ def mostrar (lista:list):
 def buscar_minimo(lista:list,key:str)->int:
     '''
     Busca el indice del valor mas bajo de una lista, dependiendo la key ingresada
-    recive una lista y un key 
+    recibe una lista y un key 
     retorna un int con el valor del indice del valor minimo
     '''
     if len(lista)>0:
@@ -43,7 +43,7 @@ def buscar_minimo(lista:list,key:str)->int:
 def buscar_maximo(lista:list,key:str)->int:
     '''
     Busca el indice del valor mas alto de una lista, dependiendo la key ingresada
-    recive una lista y un key 
+    recibe una lista y un key 
     retorna un int con el valor del indice del valor minimo
     '''
     if len(lista)>0:
@@ -59,7 +59,7 @@ def buscar_maximo(lista:list,key:str)->int:
 def busca_personaje_mas_alto_por_genero(lista:list,genero:str):
     '''
     Busca el personaje mas alto por genero
-    recive una lista y un str con el genero "male" o "female"
+    recibe una lista y un str con el genero "male" o "female"
     retorna un mensaje diciendo quien es el personaje mas alto dependiendo el genero ingresado por parametro
     '''
     if len(lista)>0:
@@ -76,7 +76,7 @@ def busca_personaje_mas_alto_por_genero(lista:list,genero:str):
 def listar_por_key(lista:list,key:str)->list:
     '''
     Ordena de menor a mayor una lista a partir del valor que represente la key ingresada
-    recive una lista a ordenar y una key
+    recibe una lista a ordenar y una key
     retorna una lista ordenada
     '''
     if len(lista)>0:
@@ -91,7 +91,7 @@ def listar_por_key(lista:list,key:str)->list:
 def exportar_csv(lista:list, path:str):
     '''
     Exporta un archivo csv a partir de una lista 
-    recive una lista 
+    recibe una lista 
     no retorna
     '''
     with open(path, "w") as file:
@@ -101,7 +101,7 @@ def exportar_csv(lista:list, path:str):
 def validar_texto(nombre:str, lista:list):
     '''
    Valida si un nombre(string) se encuentra en una lista
-   recive un string y una lista 
+   recibe un string y una lista 
    Si valida que el nombre se encuentra en la lista retorna el elemento de la lista que coincida , en caso de validar 
     '''
     if len(lista)>0:
