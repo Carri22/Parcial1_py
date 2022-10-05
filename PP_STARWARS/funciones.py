@@ -40,8 +40,6 @@ def buscar_minimo(lista:list,key:str)->int:
         return i_min
 
 
-
-
 def buscar_maximo(lista:list,key:str)->int:
     '''
     Busca el indice del valor mas alto de una lista, dependiendo la key ingresada
@@ -75,7 +73,6 @@ def busca_personaje_mas_alto_por_genero(lista:list,genero:str):
         return mensaje
         
 
-
 def listar_por_key(lista:list,key:str)->list:
     '''
     Ordena de menor a mayor una lista a partir del valor que represente la key ingresada
@@ -101,3 +98,29 @@ def exportar_csv(lista:list, path:str):
         for elemento in lista:
             file.write(f'{elemento}\n')
 
+def validar_texto(nombre:str, lista:list):
+    '''
+   Valida si un nombre(string) se encuentra en una lista
+   recive un string y una lista 
+   Si valida que el nombre se encuentra en la lista retorna el elemento de la lista que coincida , en caso de validar 
+    '''
+    if len(lista)>0:
+        lista_validar = lista.copy()
+        lista_a_validar = []
+        validacion = False
+        for elemento in lista_validar:
+            texto = elemento["name"].lower()
+            nombre=nombre.lower()
+            confirmacion = re.search(nombre, texto)
+            if confirmacion == None:
+                pass
+            else: 
+                validacion = True
+                lista = elemento
+        if validacion ==True:
+            print("\n")
+            return lista
+        else:
+            mensaje = "El heroe ingresado no se encuentra en la lista" 
+            print("\n")
+            return mensaje   

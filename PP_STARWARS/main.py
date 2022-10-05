@@ -26,6 +26,10 @@ def starwars_app():
             mostrar(listar_por_key(lista_personajes, "mass"))
         elif(respuesta=="4"):
             print("4 - Armar un buscador de personajes\n")
+            respuesta = input("Ingrese el nombre del heroe que quiere buscar \n")
+            validar = validar_texto(respuesta, lista_personajes)
+            print(validar) 
+            print("\n")
         elif(respuesta=="5"):
             print("5 - Exportar lista personajes a CSV\n")
             exportar_csv(lista_personajes, "ArchivoCSV")
